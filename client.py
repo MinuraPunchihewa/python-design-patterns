@@ -1,7 +1,6 @@
-from factory.ShapeFactory import ShapeFactory
+from factory.shape_factory import ShapeFactory
 from builder import SquareDirector
 from builder import RectangleDirector
-
 
 if __name__ == "__main__":
     print("##### FACTORY #####")
