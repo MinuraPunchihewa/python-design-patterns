@@ -1,4 +1,4 @@
-from factory.ShapeFactory import ShapeFactory
+from factory.shape_factory import ShapeFactory
 
 if __name__ == "__main__":
     # build a square

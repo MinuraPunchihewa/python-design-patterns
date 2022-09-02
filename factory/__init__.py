@@ -1,3 +1,3 @@
-from factory.IShape import IShape
-from factory.Square import Square
-from factory.Rectangle import Rectangle
+from factory.i_shape import IShape
+from factory.square import Square
+from factory.rectangle import Rectangle
