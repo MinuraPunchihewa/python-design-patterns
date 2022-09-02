@@ -1,6 +1,11 @@
 from factory.ShapeFactory import ShapeFactory
+from builder import SquareDirector
+from builder import RectangleDirector
+
 
 if __name__ == "__main__":
+    print("##### FACTORY #####")
+
     # build a square
     square = ShapeFactory.build_shape(
         'Square',
@@ -23,3 +28,15 @@ if __name__ == "__main__":
 
     print(rectangle)
     print(rectangle.perimeter())
+
+    print("### BUILDER ###")
+
+    # construct a square
+    square = SquareDirector.construct()
+
+    print(square)
+
+    # construct a rectangle
+    rectangle = RectangleDirector.construct()
+
+    print(rectangle)
