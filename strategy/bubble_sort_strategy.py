@@ -2,15 +2,15 @@ from strategy import IStrategy
 
 
 class BubbleSortStrategy(IStrategy):
-    def sort(self, inputs):
+    def sort(self, items):
         sorted = False
 
         while not sorted:
             sorted = True
-            for i in range(0, len(inputs) - 1):
-                if inputs[i + 1] < inputs[i]:
+            for i in range(0, len(items) - 1):
+                if items[i + 1] < items[i]:
                     sorted = False
-                    inputs[i], inputs[i + 1] = inputs[i + 1], inputs[i]
+                    items[i], items[i + 1] = items[i + 1], items[i]
 
-        return inputs
+        return items
     

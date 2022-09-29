@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class IStrategy(ABC):
     @abstractmethod
-    def sort(self, inputs):
+    def sort(self, items):
         """
         Sorts the list of inputs.
         """
