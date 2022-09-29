@@ -1,1 +1,4 @@
 from strategy.i_strategy import IStrategy
+from strategy.quick_sort_strategy import QuickSortStrategy
+from strategy.bubble_sort_strategy import BubbleSortStrategy
+from strategy.selection_sort_strategy import SelectionSortStrategy
