@@ -3,8 +3,8 @@ from abc import ABC, abstractmethod
 
 class IStrategy(ABC):
     @abstractmethod
-    def execute(self, inputs):
+    def sort(self, inputs):
         """
-        Executes the strategy on the inputs.
+        Sorts the list of inputs.
         """
         raise NotImplementedError("Subclasses must implement the execute method!")
