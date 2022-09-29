@@ -2,7 +2,7 @@
 
 The goal of the Factory Pattern is to help write code that separates creation from use. In other words, you should create your objects in a different place than where you use them.
 
-An example of applying this pattern to an example of creating shapes has been given here.
+An example of applying this pattern to a case of creating shapes has been given here.
 
 This pattern is commonly used when we want to allow clients to be able to determine what type of object is required to be created. This can be seen in the implementation of the `client.py` file. The client takes the type of shape to be created as an input from the user and passes this value to the `build_shape()` method of the `ShapeFactory`, which will return an object of that chosen type.
 
