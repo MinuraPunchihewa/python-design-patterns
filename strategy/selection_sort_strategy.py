@@ -1,4 +1,3 @@
-import copy
 from strategy import IStrategy
 
 
