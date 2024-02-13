@@ -3,7 +3,7 @@ import sqlalchemy as sa
 from sqlalchemy.engine import Engine
 
 
-class DatabaseFactory:
+class DatabaseClient:
     engine: Engine
 
     def __new__(cls, *args, **kwargs):
