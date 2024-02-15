@@ -1,19 +1,25 @@
-from singleton import SQLConnectionManager
 import sqlalchemy as sa
 from sqlalchemy.engine import Engine
+from sql_connection_manager import SQLConnectionManager
 
 
-class DatabaseClient:
+class DatabaseManager:
     engine: Engine
 
     def __new__(cls, *args, **kwargs):
+        """
+        Returns the instance of the class if it exists, else creates a new instance.
+
+        Singleton pattern is implemented here.
+        """
+
         if not hasattr(cls, 'instance') or not cls.instance:
           cls.instance = super().__new__(cls)
         return cls.instance
 
     def __init__(self, db_connection_str: str, table_schema: str) -> None:
         self.engine = sa.create_engine(db_connection_str)
-        self.metadata = sa.MetaData(bind=None)
+        self.metadata = sa.MetaData()
         self.table_schema = table_schema
 
     def _get_table_metadata(self, table_name: str):
@@ -39,5 +45,4 @@ class DatabaseClient:
             return dict(result)
 
     def dispose(self):
-        """ Disposes of the connection pool used by the Engine """
         self.engine.dispose()
