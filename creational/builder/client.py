@@ -1,14 +1,19 @@
-from builder import SquareDirector
-from builder import RectangleDirector
+from director import Director
+from square_builder import SquareBuilder
+from rectangle_builder import RectangleBuilder
 
 
 if __name__ == "__main__":
     # construct a square
-    square = SquareDirector.construct()
+    square_builder = SquareBuilder()
+    square_director = Director(square_builder)
+    square = square_director.construct()
 
     print(square)
 
     # construct a rectangle
-    rectangle = RectangleDirector.construct()
+    rectangle_builder = RectangleBuilder()
+    rectangle_director = Director(rectangle_builder)
+    rectangle = rectangle_director.construct()
 
     print(rectangle)
