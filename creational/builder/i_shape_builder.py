@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class IShapeBuilder(ABC):
     @staticmethod
     @abstractmethod
-    def set_type(type):
+    def set_type():
         """
         Sets the type of a shape.
         """
@@ -12,7 +12,7 @@ class IShapeBuilder(ABC):
 
     @staticmethod
     @abstractmethod
-    def set_length(length):
+    def set_length():
         """
         Sets the length of a shape.
         """
@@ -20,7 +20,7 @@ class IShapeBuilder(ABC):
 
     @staticmethod
     @abstractmethod
-    def set_breadth(breadth):
+    def set_breadth():
         """
         Sets the breadth of a shape.
         """
