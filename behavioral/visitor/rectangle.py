@@ -1,4 +1,4 @@
-from visitor import IShape
+from i_shape import IShape
 
 
 class Rectangle(IShape):
@@ -7,4 +7,4 @@ class Rectangle(IShape):
         self.height = height
 
     def accept(self, visitor):
-        visitor.visit_rectangle(self)
+        return visitor.visit_rectangle(self)

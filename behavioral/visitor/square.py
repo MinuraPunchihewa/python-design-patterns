@@ -1,4 +1,4 @@
-from visitor import IShape
+from i_shape import IShape
 
 
 class Square(IShape):
@@ -6,4 +6,4 @@ class Square(IShape):
         self.length = length
 
     def accept(self, visitor):
-        visitor.visit_square(self)
+        return visitor.visit_square(self)

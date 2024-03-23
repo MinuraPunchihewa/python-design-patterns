@@ -1,4 +1,4 @@
-from visitor import IShape
+from i_shape import IShape
 
 
 class Circle(IShape):
@@ -6,4 +6,4 @@ class Circle(IShape):
         self.radius = radius
 
     def accept(self, visitor):
-        visitor.visit_circle(self)
+        return visitor.visit_circle(self)

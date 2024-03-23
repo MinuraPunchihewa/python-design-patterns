@@ -1,4 +1,4 @@
-from visitor import IVisitor
+from i_visitor import IVisitor
 
 
 class AreaVisitor(IVisitor):
