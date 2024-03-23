@@ -10,4 +10,4 @@ class BookLibrary(ICollection):
         self._books.append((title, author))
 
     def create_iterator(self):
-        return BookIterator(self)
+        return BookIterator(self._books)
